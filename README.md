@@ -1,0 +1,2 @@
+# Chlorophyll A and Phaeopigment
+Here is a simple script that, given the appropirate parameters, will provide the concentration of Chlorophyll A and Phaeopigment. Significant figures were not taken into account.
