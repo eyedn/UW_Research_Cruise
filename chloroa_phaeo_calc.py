@@ -24,7 +24,7 @@ class Experiment:
                 solute = int(f.readline())
                 self.DF = solvent / solute
             else:
-            # DF set to 1 when no DF is given to make it inconsequential
+            # DF set to 1 when no DF is given to make self.DF inconsequential
                 self.DF = 1
 
     def get_chla(self) -> float:
