@@ -20,7 +20,9 @@ class Experiment:
             # if a dilution factor is present, is_DF == 1
             is_DF = int(f.readline())
             if is_DF == 1:
-                self.DF = float(f.readline())
+                solvent = int(f.readline())
+                solute = int(f.readline())
+                self.DF = solvent / solute
             else:
             # DF set to 1 when no DF is given to make it inconsequential
                 self.DF = 1

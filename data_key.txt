@@ -5,4 +5,5 @@ Fa
 Ex
 Filt
 Use DF? (0 = no, 1 = yes)
-DF
+solvent proportion
+solute proportion
