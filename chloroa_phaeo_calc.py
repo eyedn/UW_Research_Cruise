@@ -28,14 +28,26 @@ class Experiment:
     def get_chla(self) -> float:
         conc = self.K * (self.Fm / (self.Fm - 1)) * \
             (self.Fo - self.Fa) * self.Ex / self.Filt * self.DF
-        print(f"Chl a (µg/L) = {conc}")
-        return conc
+        
+        # truncate float for sig figs
+        conc_str = str(conc)
+        truncated_str = conc_str[:conc_str.index('.') + 4]
+        truncated_conc = float(truncated_str)
+
+        print(f"Chl a (µg/L) = {truncated_conc}")
+        return truncated_conc
 
     def get_phaeo(self) -> float:
         conc = self.K * (self.Fm / (self.Fm - 1)) * \
             ((self.Fm * self.Fa) - self.Fo) * self.Ex / self.Filt * self.DF
-        print(f"Phaeopigment (µg/L) = {conc}")
-        return conc
+        
+        # truncate float for sig figs
+        conc_str = str(conc)
+        truncated_str = conc_str[:conc_str.index('.') + 4]
+        truncated_conc = float(truncated_str)
+
+        print(f"Phaeopigment (µg/L) = {truncated_conc:.3f}")
+        return truncated_conc
     
 
 if __name__ == "__main__":
