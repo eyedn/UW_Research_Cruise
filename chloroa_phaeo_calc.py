@@ -18,9 +18,9 @@ class Experiment:
             self.Filt = float(f.readline())
 
             # if a dilution factor is present, is_DF == 1
-            is_DF = f.readline()
+            is_DF = int(f.readline())
             if is_DF == 1:
-                self.DF = f.readline()
+                self.DF = float(f.readline())
             else:
             # DF set to 1 when no DF is given to make it inconsequential
                 self.DF = 1
