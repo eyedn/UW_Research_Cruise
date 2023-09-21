@@ -4,6 +4,6 @@ Fo
 Fa
 Ex
 Filt
-Use DF? (0 = no, 1 = yes)
-solvent proportion
-solute proportion
+Was a dilution factor (DF) used? (no = 0, yes = 1)
+solvent proportion (necessary if DF was used)
+solute proportion (necessary if DF was used)
