@@ -42,6 +42,11 @@ class Experiment:
         self.phaeo = conc
     
     def get_concentrations(self) -> None:
+        # calculate
+        self.calculate_chla()
+        self.calculate_phaeo()
+
+        # print
         for i, conc in enumerate([self.chla, self.phaeo]):
             conc_str = str(conc)
             truncated_str = conc_str[:conc_str.index('.') + 4]
