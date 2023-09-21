@@ -31,17 +31,17 @@ class Experiment:
             self.chla: float = None
             self.phaeo: float = None
 
-    def get_chla(self) -> float:
+    def calculate_chla(self) -> None:
         conc = self.K * (self.Fm / (self.Fm - 1)) * \
             (self.Fo - self.Fa) * self.Ex / self.Filt * self.DF
         self.chla = conc
 
-    def get_phaeo(self) -> float:
+    def calculate_phaeo(self) -> None:
         conc = self.K * (self.Fm / (self.Fm - 1)) * \
             ((self.Fm * self.Fa) - self.Fo) * self.Ex / self.Filt * self.DF
         self.phaeo = conc
     
-    def get_formatted_conc(self) -> None:
+    def get_concentrations(self) -> None:
         for i, conc in enumerate([self.chla, self.phaeo]):
             conc_str = str(conc)
             truncated_str = conc_str[:conc_str.index('.') + 4]
